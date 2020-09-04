@@ -9,10 +9,7 @@ module.exports = () => {
       throw new Error('Auth API url is not set, please check configuration.');
     }
 
-    const getUserData = token => get(url, {
-      headers: {
-        'authorization': token
-      }})
+    const getUserData = token => get(url, { headers: { 'authorization': token }})
       .then(response => response.data)
       .catch(err => err);
 
