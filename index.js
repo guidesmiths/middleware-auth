@@ -20,7 +20,7 @@ module.exports = () => {
 				res.locals.userData = await getUserData(token);
 				return next();
 			} catch (error) {
-				return res.status(404).send(`Authentication failed: ${error.message}`);
+				return res.status(403).send(`Authentication failed: ${error.message}`);
 			}
 		};
 
